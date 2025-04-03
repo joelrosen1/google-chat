@@ -72,6 +72,7 @@ google-chat/
    source venv/bin/activate 
    pip install -r requirements.txt
    ```
+3. Note if you are having issues with dependency installation check to make sure you are on Python 3.11
 
 3. Set up environment variables:
    - Create `.env.local` in frontend directory

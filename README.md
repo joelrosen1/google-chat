@@ -76,8 +76,10 @@ google-chat/
 3. Set up environment variables:
    - Create `.env.local` in frontend directory
    - Create `.env` in backend directory
-   - Add your SerpAPI key to the backend `.env` file
-   - Add your Google Maps API key to the backend `.env` file
+   - Add your SerpAPI key to the backend `.env` file as `SERPAPI_KEY`
+   - Add your Google Maps API key to the backend `.env` file as `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`
+   - Add your Google Maps API key to the frontend `.env.local` file as `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`
+   - Add the public API url to the frontend `.env.local` file as `NEXT_PUBLIC_API_URL` (http://localhost:8000)
 
 4. Run the development servers:
    ```bash

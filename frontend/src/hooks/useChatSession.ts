@@ -190,7 +190,7 @@ export const useChatSessions = () => {
     while (retryCount < maxRetries && !success) {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/v1/search?query=${encodeURIComponent(query)}`
+          `https://${process.env.NEXT_PUBLIC_API_URL}/api/v1/search?query=${encodeURIComponent(query)}`
         );
         if (!response.ok) {
           const errorText = await response.text();

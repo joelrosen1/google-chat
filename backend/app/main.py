@@ -6,6 +6,8 @@ from .api import search
 
 load_dotenv()
 
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "").split(",")
+
 app = FastAPI(
     title="Google Search Clone API",
     description="Backend API for Google Search Clone using SerpAPI",
@@ -14,7 +16,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

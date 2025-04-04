@@ -6,9 +6,9 @@ import ImageGallery from "@/components/search/ImageGallery";
 import LocalResults from "@/components/search/LocalResults";
 import RelatedQuestions from "@/components/search/RelatedQuestions";
 import RelatedSearches from "@/components/search/RelatedSearches";
+import { Response } from "@/components/search/Response";
 import Sources from "@/components/search/Sources";
 import { useGoogleMaps } from "@/hooks/useGoogleMaps";
-import { Response } from "@/components/search/Response";
 
 import { ChatMessage } from "./Chat";
 

@@ -44,45 +44,45 @@ export default function Home() {
             <div className="p-1 space-y-1">
               {/* Render each session */}
               {sessions.map((session) => (
-  <div
-    key={session.id}
-    role="button"
-    tabIndex={0}
-    onClick={() => switchSession(session.id)}
-    onKeyDown={(e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        switchSession(session.id);
-      }
-    }}
-    className={`relative flex items-center w-full cursor-pointer rounded px-2 py-1 transition-colors ${
-      session.id === activeSessionId ? "bg-secondary" : "hover:bg-muted"
-    }`}
-  >
-    <span className="absolute left-0 top-0 bottom-0 right-10 flex items-center text-sm truncate pointer-events-none pl-4">
-      {session.id === updatingTitleId ? (
-        <>
-          {typingTitle}
-          <span className="inline-block animate-blink">|</span>
-        </>
-      ) : (
-        session.title
-      )}
-    </span>
-    <div className="ml-auto">
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={(e) => {
-          e.stopPropagation();
-          deleteSession(session.id);
-        }}
-        aria-label="Delete chat"
-      >
-        <Trash className="h-4 w-4" />
-      </Button>
-    </div>
-  </div>
-))}
+              <div
+                key={session.id}
+                role="button"
+                tabIndex={0}
+                onClick={() => switchSession(session.id)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    switchSession(session.id);
+                  }
+                }}
+                className={`relative flex items-center w-full cursor-pointer rounded px-2 py-1 transition-colors ${
+                  session.id === activeSessionId ? "bg-secondary" : "hover:bg-muted"
+                }`}
+              >
+                <span className="absolute left-0 top-0 bottom-0 right-10 flex items-center text-sm truncate pointer-events-none pl-4">
+                  {session.id === updatingTitleId ? (
+                    <>
+                      {typingTitle}
+                      <span className="inline-block animate-blink">|</span>
+                    </>
+                  ) : (
+                    session.title
+                  )}
+                </span>
+                <div className="ml-auto">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      deleteSession(session.id);
+                    }}
+                    aria-label="Delete chat"
+                  >
+                    <Trash className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            ))}
 
             </div>
           </ScrollArea>

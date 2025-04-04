@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+
 import { SearchResult } from "@/components/chat/Chat";
 
 export interface ChatMessage {

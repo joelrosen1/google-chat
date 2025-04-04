@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import { AssistantMessage } from "@/components/chat/AssistantMessage";
 import { ScrollArea } from "@/components/ui/ScrollArea";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import { Input } from "../ui/input";
 
 export interface SearchResult {
